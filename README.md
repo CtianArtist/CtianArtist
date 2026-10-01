@@ -1,8 +1,21 @@
 ## Hi there 👋
 
-I focus on the parts that make AI systems trustworthy: tool permissions, honest evaluation, reproducible data and tests that run without an API key.
+I'm a python developer with a huge focus on security research, data analysis and also AI development
 
 Featured projects
+
+🧠 Desire Axis: interpretability study of internal states in LLMs
+
+An adaptation of The Pain Axis (Tagliabue, Dung & Berg, 2026) that asks whether language models represent sexual desire as a distinct internal state, not just sex as a topic. It extracts a linear direction from the residual stream of Qwen 2.5 7B and 32B and tests it against matched controls. Work in progress.
+
+Controls built from failure: two rounds of results exposed confounds (first sexual content, then first-person sex without desire), and each was fixed with a new control set plus a held-out set never used to build the vector
+Current result: on Qwen 2.5 32B, the direction separates desire from held-out sex-without-desire by about 1.0 z, matching the size of the original paper's key gap. Desire phrased without explicit words still scores clearly positive
+Honest scope: this is evidence of a distinct concept representation, not of experience. Self-other tests, steering and behavioral experiments are next
+Engineering: extraction adapted to fit a 32B model on one Colab A100 using Hugging Face forward hooks, with resumable stages that write to Drive and a mid-depth layer window to avoid fragile layer picks
+
+PyTorch · Transformers · scikit-learn · PEFT · Colab · pytest
+
+
 🤖 SupportOps Agent: AI support agent with tool calling
 
 A customer-support agent that picks typed business tools, checks their results and returns structured answers, with a FastAPI backend and a web console that shows every tool call.
