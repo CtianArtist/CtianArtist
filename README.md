@@ -27,7 +27,7 @@ Evaluated: scenario evals report tool-selection accuracy, unauthorized actions a
 
 FastAPI · Pydantic · SQLAlchemy · OpenAI · Anthropic · pytest
 
-🔎 SexAndRag: RAG retrieval benchmark on noisy dialogue
+🔎 SATC-Rag: RAG retrieval benchmark on noisy dialogue
 
 A retrieval pipeline and benchmark built on about 40,000 lines of messy TV subtitle data. It compares BM25, dense search (BGE-M3) and hybrid retrieval across three chunk sizes.
 
